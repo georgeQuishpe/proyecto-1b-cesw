@@ -1,11 +1,11 @@
-<table class="table table-striped-columns">
-<thead>
+<table class="table">
+    <thead>
             <tr>
-                <th>Nombre de la acción</th>
-                <th>Fecha de compra</th>
-                <th>Precio de compra por acción</th>
-                <th>Cantidad de acciones</th>
-                <th>Costo total de compra</th>
+                <th class="bg-primary text-white" scope="col">Nombre de la acción</th>
+                <th class="bg-primary text-white" scope="col">Fecha de compra</th>
+                <th class="bg-primary text-white" scope="col">Precio unitario</th>
+                <th class="bg-primary text-white" scope="col">Cantidad de acciones</th>
+                <th class="bg-primary text-white" scope="col">Costo total de compra</th>
             </tr>
         </thead>
         <tbody>

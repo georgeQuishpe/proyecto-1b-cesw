@@ -1,4 +1,4 @@
-    <form method="post" action="controlador/ControladorAccion.php">
+    <form method="post" action="controlador/ControladorAccion.php" class="mx-auto my-4">
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -18,5 +18,5 @@
             <label for="cantidad" class="form-label">Cantidad</label>
             <input type="number" class="form-control" id="cantidad"  name="cantidad" required>
         </div>
-        <button type="submit" name="accion" value="registrarAccion" class="btn btn-primary">Submit</button>
+        <button type="submit" name="accion" value="registrarAccion" class="btn btn-primary">Registrar</button>
     </form>

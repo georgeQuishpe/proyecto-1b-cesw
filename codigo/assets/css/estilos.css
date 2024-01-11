@@ -1,0 +1,83 @@
+/********** General **********/
+body{
+    background: #D5D8DC !important;
+    margin: 0;
+	font-family: "Ubuntu";
+	font-weight: 400;
+    height: 100%;
+}
+
+/****** Tipos de letra ******/
+.titulo {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    margin: 0px;
+    font-size: 32px;
+    color: #FFF;
+}
+
+.subtitulo {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-size: 24px;
+    color: #5e76f8;
+}
+
+.normal {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    margin: 0px;
+    font-size: 16px;
+    color: #000;
+}
+
+.descripcion {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+    color: #FFF;
+}
+
+/****** Background ******/
+.bg-gradiente {
+    background-color: #54a3ff;
+    background-image: linear-gradient(90deg, rgba(84,163,255,1) 25%, rgba(255,88,121,1) 75%);
+}
+
+.bg-primario {
+    background-color: #54a3ff;
+}
+
+.bg-secundario {
+    background-color: rgba(255,88,121,1);
+}
+
+/****** Color ******/
+.texto-primario {
+    color: #54a3ff;
+}
+
+.texto-secundario {
+    color: rgba(255,88,121,1);
+}
+
+/****** Header Global ******/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.icono{
+    font-family: "Ubuntu";
+    font-weight: 700;
+    margin: 0px;
+    font-size: 32px;
+    color: #FFF;
+}
+
+.icono:hover{
+    color: #54a3ff;
+}
