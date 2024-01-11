@@ -11,12 +11,12 @@
 
         <div class="mb-3">
             <label for="precioUnitario" class="form-label">Precio unitario de acción</label>
-            <input type="text" class="form-control" id="precioUnitario" name="precioUnitario" required>
+            <input type="text" class="form-control" id="precioUnitario" name="precioUnitario" oninput="validarNumero(this)" required>
         </div>
         
         <div class="mb-3">
             <label for="cantidad" class="form-label">Cantidad</label>
-            <input type="number" class="form-control" id="cantidad"  name="cantidad" required>
+            <input type="text" class="form-control" id="cantidad"  name="cantidad" oninput="validarNumero(this)" required>
         </div>
         <button type="submit" name="accion" value="registrarAccion" class="btn btn-primary">Registrar</button>
     </form>

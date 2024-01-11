@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
         
         <script src="https://kit.fontawesome.com/cd7314d904.js" crossorigin="anonymous"></script>
+        <script src="assets/js/funciones.js"></script>
 
         <title>Proyecto-1B-CESW</title>
     </head>
