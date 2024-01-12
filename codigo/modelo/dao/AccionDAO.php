@@ -27,11 +27,18 @@ class AccionDAO extends BaseDatos {
     public function registrar($accion){
         try{
             $result = parent::conectar()->prepare("INSERT INTO acciones (nombre, fechaCompra, precioUnitario, cantidad, costoTotal) VALUES (?,?,?,?,?)");
-            $result->bindParam(1, $accion->nombre, PDO::PARAM_STR);
-            $result->bindParam(2, $accion->fechaCompra, PDO::PARAM_STR);
-            $result->bindParam(3, $accion->precioUnitario, PDO::PARAM_STR);
-            $result->bindParam(4, $accion->cantidad, PDO::PARAM_STR);
-            $result->bindParam(5, $accion->costoTotal, PDO::PARAM_STR);
+            $nombre = $accion->getNombre();
+            $fechaCompra = $accion->getFechaCompra();
+            $precioUnitario = $accion->getPrecioUnitario();
+            $cantidad = $accion->getCantidad();
+            $costoTotal = $accion->getCostoTotal();
+
+            $result->bindParam(1, $nombre, PDO::PARAM_STR);
+            $result->bindParam(2, $fechaCompra, PDO::PARAM_STR);
+            $result->bindParam(3, $precioUnitario, PDO::PARAM_STR);
+            $result->bindParam(4, $cantidad, PDO::PARAM_STR);
+            $result->bindParam(5, $costoTotal, PDO::PARAM_STR);
+            
             return $result->execute();
         } catch (Exception $e){
            die("Error: No se ha podido registrar la acción " . $e->getMessage());

@@ -24,11 +24,11 @@ class AccionDAOTest extends TestCase{
         $accionDAO = AccionDAO::obtenerInstancia();
 
         $accion = new Accion("","",0,0);
-        $accion->nombre = 'Ejemplo';
-        $accion->fechaCompra = '2024-01-11';
-        $accion->precioUnitario = 10.5;
-        $accion->cantidad = 5;
-        $accion->costoTotal = 52.5;
+        $accion->getNombre() = 'Ejemplo';
+        $accion->getFechaCompra() = '2024-01-11';
+        $accion->getPrecioUnitario() = 10.5;
+        $accion->getCantidad() = 5;
+        $accion->getCostoTotal() = 52.5;
 
         $resultado = $accionDAO->registrar($accion);
 
