@@ -14,10 +14,10 @@ En un mundo financiero cada vez más dinámico, CapitalTrack se destaca al ofrec
 ## Funcionalidad
 ### Características Destacadas
 
- *- Registro de Acciones mediante Formulario: *
+*- Registro de Acciones mediante Formulario:*
 CapitalTrack te permite ingresar fácilmente las acciones que has adquirido a través de un formulario intuitivo. Completa los detalles, como el nombre de la acción, fecha de compra, cantidad y precio de compra de manera rápida y precisa.
 
-*- Tabla Resumen de Acciones: *
+*- Tabla Resumen de Acciones:*
 Visualiza todas tus inversiones en una tabla resumen clara y detallada. La tabla proporciona una visión general de tus acciones, incluyendo el nombre, cantidad, precio actual y variación de valor. Mantente informado sobre el rendimiento de tu cartera en un solo vistazo.
 
 ## Instalación
@@ -46,7 +46,7 @@ Visualiza todas tus inversiones en una tabla resumen clara y detallada. La tabla
 *- Indentación:*
 Se utiliza una indentación consistente (espacios o tabuladores) para mejorar la legibilidad del código.
 
-*-Nombres Descriptivos:*
+*- Nombres Descriptivos:*
 Se  asigna nombres descriptivos a tus variables, funciones y clases. Evita nombres ambiguos.
 
 *- Separación de Responsabilidades:*
@@ -89,13 +89,13 @@ La aplicación se desarrolló siguiendo la metodología ágil XP (eXtreme Progra
 
 TDD, o Desarrollo Guiado por Pruebas, es una metodología de desarrollo de software que enfatiza la creación de pruebas automatizadas antes de escribir el código de producción. El proceso de TDD generalmente sigue estos pasos:
 
-* -Escribir una Prueba:* Antes de comenzar a implementar una nueva funcionalidad o corregir un error, se escribe una prueba automatizada que defina el comportamiento esperado. Esta prueba inicial generalmente fallará porque la funcionalidad aún no está implementada.
+*- Escribir una Prueba:* Antes de comenzar a implementar una nueva funcionalidad o corregir un error, se escribe una prueba automatizada que defina el comportamiento esperado. Esta prueba inicial generalmente fallará porque la funcionalidad aún no está implementada.
 
-* -Escribir el Código de Producción:* Se implementa la funcionalidad necesaria para que la prueba pase. En este punto, el objetivo es escribir la cantidad mínima de código necesaria para que la prueba tenga éxito.
+*- Escribir el Código de Producción:* Se implementa la funcionalidad necesaria para que la prueba pase. En este punto, el objetivo es escribir la cantidad mínima de código necesaria para que la prueba tenga éxito.
 
-* -Ejecutar las Pruebas:* Se ejecutan todas las pruebas automatizadas para garantizar que la nueva funcionalidad no haya introducido errores y que las funcionalidades existentes sigan funcionando correctamente.
+*- Ejecutar las Pruebas:* Se ejecutan todas las pruebas automatizadas para garantizar que la nueva funcionalidad no haya introducido errores y que las funcionalidades existentes sigan funcionando correctamente.
 
-* -Refactorizar el Código:* Si es necesario, se realiza la refactorización del código para mejorar su estructura, legibilidad o rendimiento, manteniendo las pruebas verdes.
+*- Refactorizar el Código:* Si es necesario, se realiza la refactorización del código para mejorar su estructura, legibilidad o rendimiento, manteniendo las pruebas verdes.
 
 Este ciclo se repite de forma continua a medida que se agregan nuevas funcionalidades o se realizan modificaciones en el código existente. La idea central es que las pruebas actúan como una especificación ejecutable del comportamiento del software y proporcionan una forma de validar que los cambios realizados no afectan negativamente la funcionalidad existente.
 
