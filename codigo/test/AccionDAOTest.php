@@ -22,18 +22,15 @@ class AccionDAOTest extends TestCase{
 
     public function test_given_oneAction_when_register_then_true() {
         $accionDAO = AccionDAO::obtenerInstancia();
-
-        $accion = new Accion("","",0,0);
-        $accion->getNombre() = 'Ejemplo';
-        $accion->getFechaCompra() = '2024-01-11';
-        $accion->getPrecioUnitario() = 10.5;
-        $accion->getCantidad() = 5;
-        $accion->getCostoTotal() = 52.5;
-
+    
+        $accion = new Accion("Ejemplo", "2024-01-11", 10.5, 5);
+        $accion->setCosTotal(52.5); 
+    
         $resultado = $accionDAO->registrar($accion);
-
+    
         $this->assertTrue($resultado);
     }
+    
 }
 
 ?>

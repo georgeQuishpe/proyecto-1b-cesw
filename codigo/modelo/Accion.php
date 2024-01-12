@@ -42,5 +42,8 @@ class Accion {
     public function getCostoTotal() {
         return $this->costoTotal;
     }
+    public function setCosTotal($costo) {
+        $this->costoTotal = $costo;
+    }
 }
 ?>

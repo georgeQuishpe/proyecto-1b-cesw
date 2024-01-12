@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"AccionDAOTest::test_given_twoInstances_when_getIntance_then_same":0.012,"AccionDAOTest::test_given_anInstance_when_consultAction_then_getArray":0.004,"AccionDAOTest::test_given_oneAction_when_register_then_true":0.025}}
+{"version":1,"defects":[],"times":{"AccionDAOTest::test_given_twoInstances_when_getIntance_then_same":0.005,"AccionDAOTest::test_given_anInstance_when_consultAction_then_getArray":0.026,"AccionDAOTest::test_given_oneAction_when_register_then_true":0.02}}
