@@ -30,7 +30,15 @@ class AccionDAOTest extends TestCase{
     
         $this->assertTrue($resultado);
     }
-    
+
+    public function test_given_oneAction_when_consultPrice_then_true() {
+        $accion = new Accion("AAPL", "2024-02-25", 200, 7);
+        $precioMercado =  $accion->getGananciaPerdida();
+        $cambio = $accion->getCambio();
+        $this->assertNotEquals(-1, $precioMercado);
+        $this->assertNotNull($cambio);
+    }
+        
 }
 
 ?>
