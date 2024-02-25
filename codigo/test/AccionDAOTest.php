@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once 'codigo\modelo\dao\AccionDAO.php';
+require_once 'modelo\dao\AccionDAO.php';
 
 class AccionDAOTest extends TestCase{
     public function test_given_twoInstances_when_getIntance_then_same() {

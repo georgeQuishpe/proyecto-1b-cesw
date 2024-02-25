@@ -7,6 +7,8 @@ class Accion {
     private $precioUnitario;
     private $cantidad;
     private $costoTotal;
+    private $cambio;
+    private $gananciaPerdida;
 
     // Constructor que inicializa los atributos al crear un objeto Accion.
     public function __construct($nombre, $fechaCompra, $precioUnitario, $cantidad) {
@@ -14,7 +16,9 @@ class Accion {
         $this->fechaCompra = $fechaCompra;
         $this->precioUnitario = $precioUnitario;
         $this->cantidad = $cantidad;
-        $this->costoTotal = $precioUnitario * $cantidad; // Calcula el costo total al crear el objeto
+        $this->costoTotal = $precioUnitario * $cantidad; 
+        $this->gananciaPerdida = $this->getPrecioMercadoFromAPI($nombre) * $cantidad;
+        $this->cambio = $this->calcularCambio();
     }
 
     // Método mágico __toString que devuelve una representación en cadena de la acción.
@@ -44,6 +48,42 @@ class Accion {
     }
     public function setCosTotal($costo) {
         $this->costoTotal = $costo;
+    }
+    public function getCambio() {
+        return $this->cambio;
+    }
+    public function setCamcio($cambio) {
+        $this->cambio = $cambio;
+    }
+    public function getGananciaPerdida() {
+        return $this->gananciaPerdida;
+    }
+    public function setGananciaPerdida($gananciaPerdida) {
+        $this->gananciaPerdida = $gananciaPerdida;
+    }
+
+    private function calcularCambio() {
+        if ($this->gananciaPerdida !== null) {
+            $cambioPorcentaje = (($this->gananciaPerdida - $this->costoTotal) / $this->costoTotal) * 100;
+            return $cambioPorcentaje;
+        } else {
+            return null; // Maneja el caso en el que no se pueda obtener la ganancia/pérdida
+        }
+    }
+
+    private function getPrecioMercadoFromAPI($nombre) {
+        $api_key = "cnb4dj9r01qks5iv03pgcnb4dj9r01qks5iv03q0";
+        $url = "https://finnhub.io/api/v1/quote?symbol=$nombre&token=$api_key";
+    
+        $response = file_get_contents($url);
+    
+        $data = json_decode($response, true);
+    
+        if ($data && isset($data['c'])) {
+            return $data['c'];
+        } else {
+            return -1;
+        }
     }
 }
 ?>

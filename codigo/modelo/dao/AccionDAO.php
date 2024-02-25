@@ -37,7 +37,7 @@ class AccionDAO extends BaseDatos {
     public function registrar($accion){
         try{
             // Prepara una consulta SQL para insertar una nueva fila en la tabla 'acciones'.
-            $result = parent::conectar()->prepare("INSERT INTO acciones (nombre, fechaCompra, precioUnitario, cantidad, costoTotal) VALUES (?,?,?,?,?)");
+            $result = parent::conectar()->prepare("INSERT INTO acciones (nombre, fechaCompra, precioUnitario, cantidad, costoTotal, cambio, gananciaPerdida) VALUES (?,?,?,?,?,?,?)");
             
             // Obtiene los atributos de la instancia de Accion para la inserción.
             $nombre = $accion->getNombre();
@@ -45,6 +45,8 @@ class AccionDAO extends BaseDatos {
             $precioUnitario = $accion->getPrecioUnitario();
             $cantidad = $accion->getCantidad();
             $costoTotal = $accion->getCostoTotal();
+            $cambio = $accion->getCambio();
+            $gananciaPerdida = $accion->getGananciaPerdida();
 
             // Vincula los parámetros de la consulta con los valores obtenidos de la instancia de Accion.
             $result->bindParam(1, $nombre, PDO::PARAM_STR);
@@ -52,6 +54,8 @@ class AccionDAO extends BaseDatos {
             $result->bindParam(3, $precioUnitario, PDO::PARAM_STR);
             $result->bindParam(4, $cantidad, PDO::PARAM_STR);
             $result->bindParam(5, $costoTotal, PDO::PARAM_STR);
+            $result->bindParam(6, $cambio, PDO::PARAM_STR);
+            $result->bindParam(7, $gananciaPerdida, PDO::PARAM_STR);
             
             // Ejecuta la consulta y retorna el resultado.
             return $result->execute();

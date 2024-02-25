@@ -6,6 +6,8 @@
                 <th class="bg-primary text-white" scope="col">Precio unitario</th>
                 <th class="bg-primary text-white" scope="col">Cantidad de acciones</th>
                 <th class="bg-primary text-white" scope="col">Costo total de compra</th>
+                <th class="bg-primary text-white" scope="col">Cambio</th>
+                <th class="bg-primary text-white" scope="col">Ganancia / Pérdida</th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +18,8 @@
                 <td><?= $accion['precioUnitario'] ?></td>
                 <td><?= $accion['cantidad'] ?></td>
                 <td><?= $accion['costoTotal'] ?></td>
+                <td><?= $accion['cambio'] ?>%</td>
+                <td><?= $accion['gananciaPerdida'] ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
