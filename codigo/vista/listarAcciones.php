@@ -27,18 +27,20 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach (ControladorAccion::obtenerInstancia()->obtenerTodas() as $accion): ?>
+    <?php foreach (ControladorAccion::obtenerInstancia()->obtenerTodas() as $accion):?> 
+        <?php $valorMercado = Accion::getPrecioMercadoFromAPI($accion['nombre']); ?>
         <tr>
             <td><?= $accion['nombre'] ?></td>
             <td><?= $accion['fechaCompra'] ?></td>
             <td><?= $accion['precioUnitario'] ?></td>
             <td><?= $accion['cantidad'] ?></td>
             <td><?= $accion['costoTotal'] ?></td>
-            <td><?= $accion['cambio'] ?>%</td>
-            <td><?= $accion['gananciaPerdida'] ?></td>
+            <td><?= number_format(Accion::calcularCambio($valorMercado, $accion['cantidad'], $accion['costoTotal']), 1) ?>%</td> 
+            <td><?= number_format($valorMercado * $accion['cantidad'], 1) ?></td>
         </tr>
     <?php endforeach; ?>
-    </tbody>
+</tbody>
+
 </table>
 
 <script>

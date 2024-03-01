@@ -40,10 +40,9 @@ CREATE TABLE `acciones` (
 --
 
 INSERT INTO `acciones` (`nombre`, `fechaCompra`, `precioUnitario`, `cantidad`, `costoTotal`) VALUES
-('Amazon', '2024-01-04', 10, 5, 50),
-('Apple', '2024-01-02', 50, 2, 100),
-('Meta', '2024-01-28', 140.5, 100, 14050),
-('Youtube', '2024-01-28', 1500, 2, 3000);
+('AAPL', '2024-01-04', 150, 10, 1500),
+('MSFT', '2024-01-02', 250, 5, 1250),
+('TSLA', '2024-01-28', 700, 2, 1400);
 
 --
 -- Índices para tablas volcadas
@@ -60,10 +59,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-
-ALTER TABLE `acciones`
-  ADD COLUMN `cambio` DOUBLE,
-  ADD COLUMN `gananciaPerdida` DOUBLE;
-
-UPDATE `acciones`
-SET `gananciaPerdida` = 0, `cambio` = 0;
