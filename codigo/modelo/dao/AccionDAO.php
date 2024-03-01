@@ -33,6 +33,20 @@ class AccionDAO extends BaseDatos {
         }
     }
 
+    // Método para ordenar la lista de acciones almacenadas en la base de datos por el nombre de la acción.
+    public function obtenerTodasOrdenadasPorPU(){
+        try{
+            // Prepara y ejecuta una consulta SQL para seleccionar todas las filas de la tabla 'acciones' ordenadas por el nombre de la acción.
+            $result = parent::conectar()->prepare("SELECT * FROM acciones ORDER BY precioUnitario");
+            $result->execute();
+            // Retorna todas las filas como un arreglo asociativo.
+            return $result->fetchAll();
+        }catch(Exception $e){
+            // En caso de error, muestra el mensaje de error y termina el script.
+            die($e->getMessage());
+        }
+    }
+
     // Método para registrar una nueva acción en la base de datos.
     public function registrar($accion){
         try{

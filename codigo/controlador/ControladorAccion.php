@@ -37,6 +37,11 @@ class ControladorAccion {
         }
     }
 
+    // Método para ordenar la lista de acciones si se recibe una solicitud GET con la acción 'ordenarLista'.
+    public function ordenarLista() {
+        $accionDAO = AccionDAO::obtenerInstancia();
+        return $accionDAO->obtenerTodasOrdenadasPorPU();
+    }
 }
 
 // Se crea una instancia del ControladorAccion.
