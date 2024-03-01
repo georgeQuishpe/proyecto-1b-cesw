@@ -1,6 +1,15 @@
-<div class="container text-center">
-    <button class="btn btn-primary" onclick="ordenarPorPrecio()">Ordenar por Precio unitario</button>
-    <button class="btn btn-primary" onclick="ordenarPorNombre()">Ordenar por Nombre de la acción</button>
+<div class="container mt-4">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="columna">Ordenar por:</label>
+        </div>
+        <select class="custom-select" id="columna" onchange="ordenarTabla()">
+          <option value="nombre">Nombre de la acción</option>
+          <option value="precio">Precio unitario</option>
+        </select>
+      </div>
+    </div>
 </div>
 
 <br>
@@ -33,36 +42,30 @@
 </table>
 
 <script>
-    let flagPrecio = false;
-    let flagNombre = false;
-
-    function ordenarPorPrecio() {
-        flagPrecio = !flagPrecio;
+    function ordenarTabla() {
+        const columna = document.getElementById("columna").value;
         const tabla = document.getElementById("miTabla");
         const tbody = tabla.querySelector("tbody");
         const filas = Array.from(tbody.querySelectorAll("tr"));
 
         filas.sort((a, b) => {
-            const valorA = parseFloat(a.cells[2].textContent.trim());
-            const valorB = parseFloat(b.cells[2].textContent.trim());
-            return flagPrecio ? valorA - valorB : valorB - valorA;
-        });
+            let valorA, valorB;
 
-        filas.forEach(fila => tbody.appendChild(fila));
-    }
-
-    function ordenarPorNombre() {
-        flagNombre = !flagNombre;
-        const tabla = document.getElementById("miTabla");
-        const tbody = tabla.querySelector("tbody");
-        const filas = Array.from(tbody.querySelectorAll("tr"));
-
-        filas.sort((a, b) => {
-            const textoA = a.cells[0].textContent.trim().toLowerCase();
-            const textoB = b.cells[0].textContent.trim().toLowerCase();
-            return flagNombre ? textoA.localeCompare(textoB) : textoB.localeCompare(textoA);
+            switch(columna) {
+                case "nombre":
+                    valorA = a.cells[0].textContent.trim().toLowerCase();
+                    valorB = b.cells[0].textContent.trim().toLowerCase();
+                    return valorA.localeCompare(valorB);
+                case "precio":
+                    valorA = parseFloat(a.cells[2].textContent.trim());
+                    valorB = parseFloat(b.cells[2].textContent.trim());
+                    return valorA - valorB;
+                default:
+                    return 0;
+            }
         });
 
         filas.forEach(fila => tbody.appendChild(fila));
     }
 </script>
+
