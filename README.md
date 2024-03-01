@@ -20,6 +20,15 @@ CapitalTrack te permite ingresar fácilmente las acciones que has adquirido a tr
 *- Tabla Resumen de Acciones:*
 Visualiza todas tus inversiones en una tabla resumen clara y detallada. La tabla proporciona una visión general de tus acciones, incluyendo el nombre, cantidad, precio actual y variación de valor. Mantente informado sobre el rendimiento de tu cartera en un solo vistazo.
 
+*- Uso de API para visualizar el % cambio y la ganancia/pérdida:*
+Mediante una API (FinnHub), donde se diseñó un punto (endpoint) que acepte los valores anteriores y actuales del activo o medida como parámetros de entrada. La API calcularía entonces el porcentaje de cambio y proporcionaría este valor como parte de la respuesta.
+
+*- Ordenamiento de tabla resumen de Acciones:*
+Implica proporcionar al usuario la capacidad de reorganizar los datos en la tabla según un criterio específico. Esto permite que los datos se presenten de manera más significativa y se adapten mejor a las necesidades del usuario.
+
+*- Persistencia de Datos:*
+La aplicación tiene la apacidad de una aplicación para almacenar información de forma permanente, de modo que los datos puedan ser recuperados y utilizados en futuras sesiones o interacciones.
+
 ## Instalación
 1. Descarga e instala XAMPP en tu computadora.
 2. Clona o descarga el repositorio del proyecto.
